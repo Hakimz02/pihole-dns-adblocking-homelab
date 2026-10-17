@@ -1,8 +1,8 @@
-\# Pi-hole DNS Ad-Blocking Homelab
+# Pi-hole DNS Ad-Blocking Homelab
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -10,23 +10,23 @@ A personal homelab project built to practise Linux administration, DNS configura
 
 
 
-\## Lab Environment
+## Lab Environment
 
 
 
-\- \*\*Operating System:\*\* Ubuntu Server 24.04.5 LTS
+ **Operating System:** Ubuntu Server 24.04.5 LTS
 
-\- \*\*Virtualisation:\*\* Oracle VirtualBox
+ **Virtualisation:** Oracle VirtualBox
 
-\- \*\*DNS Filtering:\*\* Pi-hole v6
+ **DNS Filtering:** Pi-hole v6
 
-\- \*\*Upstream DNS:\*\* Cloudflare
+ **Upstream DNS:** Cloudflare
 
-\- \*\*Client:\*\* Windows PowerShell
+ **Client:** Windows PowerShell
 
 
 
-\## Network Design
+## Network Design
 
 
 
@@ -44,7 +44,7 @@ The host-only network allows Windows to query Pi-hole directly without changing 
 
 
 
-\## Implementation
+## Implementation
 
 
 
@@ -64,11 +64,10 @@ The host-only network allows Windows to query Pi-hole directly without changing 
 
 
 
-\## Validation
+## Validation
 
 
-
-\### DNS Resolution
+### DNS Resolution
 
 
 
@@ -88,7 +87,7 @@ Result: Windows successfully resolved `google.com` through Pi-hole at `192.168.5
 
 
 
-\### Domain Blocking
+### Domain Blocking
 
 
 
@@ -108,7 +107,7 @@ Result: Pi-hole returned `0.0.0.0` and `::`, confirming that the tested domain w
 
 
 
-\### Service Status
+### Service Status
 
 
 
@@ -116,7 +115,7 @@ Verified that Pi-hole FTL was listening on DNS port 53 and that blocking was ena
 
 
 
-\### Reboot Test
+### Reboot Test
 
 
 
@@ -124,7 +123,7 @@ Restarted Ubuntu Server and verified that Pi-hole's DNS service and blocking wer
 
 
 
-\## Key Learning Outcomes
+## Key Learning Outcomes
 
 
 
@@ -142,7 +141,7 @@ Restarted Ubuntu Server and verified that Pi-hole's DNS service and blocking wer
 
 
 
-\## Future Improvements
+## Future Improvements
 
 
 
