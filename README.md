@@ -54,7 +54,7 @@ DNS resolution was tested using `nslookup`:
 
 ## DNS Configuration Strategy
 
-### Option A: Test Pi-hole on One Device (Recommended)
+### Option A: Test Pi-hole on One Device (My Choice)
 
 For this homelab, Pi-hole was configured on the Windows host only, while other household devices continued using their existing DNS configuration.
 
