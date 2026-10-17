@@ -5,8 +5,6 @@
 A personal homelab project built to practise Linux administration, DNS configuration, networking, and troubleshooting using Pi-hole on Ubuntu Server in Oracle VirtualBox.
 
 
-## Overview
-
 ## Lab Environment
 
 
