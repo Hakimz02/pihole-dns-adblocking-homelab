@@ -53,6 +53,30 @@ DNS resolution was tested using `nslookup`:
 
 ![Windows DNS Validation](screenshots/windows-nslookup.png)
 
+
+## DNS Configuration Strategy
+
+### Option A: Test Pi-hole on One Device (Recommended)
+
+For this homelab, Pi-hole was configured on the Windows host only, while other household devices continued using their existing DNS configuration.
+
+**Advantages:**
+- Limits the impact of configuration issues to one device.
+- Makes testing and troubleshooting easier.
+- Allows Windows to revert to automatic DNS when Pi-hole is unavailable.
+
+**Limitation:** DNS filtering on Windows depends on the Pi-hole virtual machine being running and reachable.
+
+### Option B: Pi-hole and a Public Secondary DNS
+
+Another possible configuration is to specify Pi-hole as the primary DNS server and a public resolver such as Cloudflare (`1.1.1.1`) as the secondary DNS server.
+
+However, clients may send DNS queries to either configured server rather than using the secondary server only after the primary fails. Queries sent directly to Cloudflare bypass Pi-hole's filtering.
+
+Therefore, a public secondary DNS server does not guarantee strict Pi-hole filtering or predictable failover behaviour.
+
+**Design decision:** Use Pi-hole on a single test device first to reduce household disruption and simplify troubleshooting.
+
 ## 3. Pi-hole Dashboard
 
 The Pi-hole web interface was accessed to verify that the service was running and DNS blocking was enabled.
